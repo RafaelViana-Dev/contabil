@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('fiscals', function (Blueprint $table) {
+        Schema::create('financials', function (Blueprint $table) {
             $table->id();
-            
-            $table->integer('numero_nota');
-            $table->date('data_emissao');
-            $table->string('cliente');
-            $table->decimal('valor_total', 10, 2);
-
             $table->timestamps();
         });
     }
@@ -28,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('fiscals');
+        Schema::dropIfExists('financials');
     }
 };

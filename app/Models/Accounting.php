@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Contabil extends Model
+class Accounting extends Model
 {
     //
 }

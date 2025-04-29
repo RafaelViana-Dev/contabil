@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\FiscalResource\Pages;
+namespace App\Filament\Resources\TaxResource\Pages;
 
-use App\Filament\Resources\FiscalResource;
+use App\Filament\Resources\TaxResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditFiscal extends EditRecord
+class EditTax extends EditRecord
 {
-    protected static string $resource = FiscalResource::class;
+    protected static string $resource = TaxResource::class;
 
     protected function getHeaderActions(): array
     {

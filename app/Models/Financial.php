@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Fiscal extends Model
+class Financial extends Model
 {
     //
 }

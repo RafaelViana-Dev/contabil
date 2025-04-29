@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ContabilResource\Pages;
-use App\Filament\Resources\ContabilResource\RelationManagers;
-use App\Models\Contabil;
+use App\Filament\Resources\TaxResource\Pages;
+use App\Filament\Resources\TaxResource\RelationManagers;
+use App\Models\Tax;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,13 +13,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ContabilResource extends Resource
+class TaxResource extends Resource
 {
-    protected static ?string $model = Contabil::class;
+    protected static ?string $model = Tax::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    protected static ?string $navigationLabel = 'Contabil';
 
     public static function form(Form $form): Form
     {
@@ -58,9 +56,9 @@ class ContabilResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListContabils::route('/'),
-            'create' => Pages\CreateContabil::route('/create'),
-            'edit' => Pages\EditContabil::route('/{record}/edit'),
+            'index' => Pages\ListTaxes::route('/'),
+            'create' => Pages\CreateTax::route('/create'),
+            'edit' => Pages\EditTax::route('/{record}/edit'),
         ];
     }
 }

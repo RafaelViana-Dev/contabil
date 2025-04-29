@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FiscalResource\Pages;
-use App\Filament\Resources\FiscalResource\RelationManagers;
-use App\Models\Fiscal;
+use App\Filament\Resources\AccountingResource\Pages;
+use App\Filament\Resources\AccountingResource\RelationManagers;
+use App\Models\Accounting;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class FiscalResource extends Resource
+class AccountingResource extends Resource
 {
-    protected static ?string $model = Fiscal::class;
-
-    protected static ?string $navigationLabel = 'Fiscal';
+    protected static ?string $model = Accounting::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -58,9 +56,9 @@ class FiscalResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListFiscals::route('/'),
-            'create' => Pages\CreateFiscal::route('/create'),
-            'edit' => Pages\EditFiscal::route('/{record}/edit'),
+            'index' => Pages\ListAccountings::route('/'),
+            'create' => Pages\CreateAccounting::route('/create'),
+            'edit' => Pages\EditAccounting::route('/{record}/edit'),
         ];
     }
 }

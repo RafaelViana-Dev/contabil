@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FinanceiroResource\Pages;
-use App\Filament\Resources\FinanceiroResource\RelationManagers;
-use App\Models\Financeiro;
+use App\Filament\Resources\FinancialResource\Pages;
+use App\Filament\Resources\FinancialResource\RelationManagers;
+use App\Models\Financial;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,13 +13,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class FinanceiroResource extends Resource
+class FinancialResource extends Resource
 {
-    protected static ?string $model = Financeiro::class;
+    protected static ?string $model = Financial::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    protected static ?string $navigationLabel = 'Financeiro';
 
     public static function form(Form $form): Form
     {
@@ -58,9 +56,9 @@ class FinanceiroResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListFinanceiros::route('/'),
-            'create' => Pages\CreateFinanceiro::route('/create'),
-            'edit' => Pages\EditFinanceiro::route('/{record}/edit'),
+            'index' => Pages\ListFinancials::route('/'),
+            'create' => Pages\CreateFinancial::route('/create'),
+            'edit' => Pages\EditFinancial::route('/{record}/edit'),
         ];
     }
 }
