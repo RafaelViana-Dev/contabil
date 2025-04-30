@@ -19,6 +19,8 @@ class UserResource extends Resource
 
     protected static ?string $navigationLabel = 'Usuários';
 
+    protected static ?string $navigationGroup = 'Administração';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     #[\Override]
