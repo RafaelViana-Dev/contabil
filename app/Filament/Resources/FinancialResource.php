@@ -17,12 +17,19 @@ class FinancialResource extends Resource
 {
     protected static ?string $model = Financial::class;
 
+    protected static ?string $navigationLabel = 'Financeiro';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     #[\Override]
     public static function getModelLabel(): string
     {
         return __('Financial');
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Registros Financeiros'; // Título no plural
     }
 
     public static function form(Form $form): Form

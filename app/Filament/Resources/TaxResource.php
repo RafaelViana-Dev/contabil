@@ -19,10 +19,17 @@ class TaxResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationLabel = 'Fiscal';
+
     #[\Override]
     public static function getModelLabel(): string
     {
         return __('Tax');
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Registros Fiscais'; // Título no plural
     }
 
     public static function form(Form $form): Form
